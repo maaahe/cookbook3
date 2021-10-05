@@ -1,5 +1,5 @@
 {
-  "name": "cookbook3",
+  "name": "cleanreact",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,9 +9,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "uui": "^1.0.7",
-    "uuid": "^8.3.2",
-    "uuidv4": "^6.2.12",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -37,11 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/preset-env": "^7.15.6",
-    "babel-loader": "^8.2.2",
-    "webpack": "^5.56.1"
   }
 }
