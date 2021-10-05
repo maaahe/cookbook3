@@ -1,10 +1,38 @@
+import React, {useState} from "react"
 import RecipeEdit from "./components/RecipeEdit";
 import RecipeList from "./components/RecipeList";
+import { v4 as uuidv4 } from 'uuid';
 
-export default function App() {
+
+function App() {
+
+  const [recipes, setRecipes] = useState(sampleRecipes)
+
+  function handleRecipeAdd() {
+    const newRecipe = {
+      id: uuidv4(),
+      name: "New Recipe",
+      cookTime: "",
+      instructions: "",
+      ingredients: [{
+        id: uuidv4(),
+        ingredientName: "",
+        amount: 0
+      },{
+        id: uuidv4(),
+        ingredientName: "",
+        amount: "1 Tbs"
+      }],
+    }
+
+    setRecipes([...recipes, newRecipe])
+  }
+
   return (
     <>
-      <RecipeList recipes={sampleRecipes}/>
+      <RecipeList
+        recipes={recipes}
+        handleRecipeAdd={handleRecipeAdd}/>
       <RecipeEdit />
     </>
   );
@@ -12,7 +40,7 @@ export default function App() {
 
 const sampleRecipes = [
   {
-    id: 1,
+    id: uuidv4(),
     name: "Marinated strawberries",
     cookTime: "1:45",
     instructions: "1. Pick strawberry 2. Marinate strawberry 3. Eat strawberry",
@@ -25,15 +53,21 @@ const sampleRecipes = [
     }]
   },
   {
-    id: 2,
+    id: uuidv4(),
     name: "Roasted chocolate",
     cookTime: "0:45",
     instructions: "1. Roast chocolate 2. Eat strawberry",
-    ingredients: [{
+    ingredients: 
+    [
+      {
       ingredientName: "cacao beans",
       amount: "1 kilo"
-    }, {
+      }, {
       ingredientName: "chia seeds",
       amount: "3 scoops"
-    }]
-  }]
+      }
+    ]
+  }
+]
+
+export default App
