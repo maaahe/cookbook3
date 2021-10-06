@@ -3,13 +3,26 @@ import Ingredients from './Ingredients'
 
 export default function RecipeList({
     recipes,
-    handleRecipeAdd
+    handleRecipeAdd,
+    handleRecipeDelete,
+    showUuid
 }) {
     return (
         <>
             <div>
                 {recipes.map(recipe => 
                     <>
+                        <div>
+                            <button>
+                                Edit
+                            </button>
+                            
+                            <button
+                                onClick={() => handleRecipeDelete(recipe)}
+                            >
+                                Delete
+                            </button>
+                        </div>
                         <h1>{recipe.name}</h1>
                         <div>
                             <label>Cook time</label>
