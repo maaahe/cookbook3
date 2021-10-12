@@ -1,0 +1,8 @@
+.ingredientList {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.ingredientList span {
+    margin-bottom: 8px;
+}

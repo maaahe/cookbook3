@@ -1,0 +1,23 @@
+@import "./reset.css";
+@import "./recipeList.css";
+@import "./recipe.css";
+@import "./ingredientList.css";
+@import "./instructions.css";
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.recipeList {
+    width: 50%;
+    height: 100vh;
+    padding: 24px;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;    
+}

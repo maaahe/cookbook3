@@ -1,0 +1,12 @@
+.instructionsList {
+    display: grid;
+    grid-template-columns: 24px auto;
+}
+
+.instructionsList span {
+    margin-bottom: 8px;
+}
+
+.instructionsList span:last-child {
+    margin-bottom: 0px;
+}
