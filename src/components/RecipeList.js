@@ -9,7 +9,7 @@ export default function RecipeList({
     const {handleRecipeAdd} = useContext(RecipeContext)
 
     return (
-        <>
+        <div class="recipeList">
             <div>
                 {recipes.map(recipe => 
                     <Recipe 
@@ -18,10 +18,13 @@ export default function RecipeList({
                 )}
             </div>
 
-            
-
-            <button onClick={handleRecipeAdd}>Add recipe</button>
-        </>
+            <button 
+                onClick={handleRecipeAdd}
+                class="btn"
+            > 
+                Add recipe
+            </button>
+        </div>
 
     )
 }

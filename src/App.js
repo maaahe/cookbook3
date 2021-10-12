@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import RecipeEdit from "./components/RecipeEdit";
 import RecipeList from "./components/RecipeList";
+import "./css/app.css";
 import { v4 as uuidv4 } from 'uuid';
 
 export const RecipeContext = React.createContext();
@@ -19,7 +20,7 @@ function App() {
       id: uuidv4(),
       name: "New Recipe",
       cookTime: "",
-      instructions: "",
+      instructions: [{step: "", instruction: ""}, {step: "", instruction: ""}],
       ingredients: [{
         id: uuidv4(),
         ingredientName: "",
@@ -54,7 +55,28 @@ const sampleRecipes = [
     id: uuidv4(),
     name: "Marinated strawberries",
     cookTime: "1:45",
-    instructions: "1. Pick strawberry 2. Marinate strawberry 3. Eat strawberry",
+    instructions: [
+      {
+        step: 1,
+        instruction: "Pick strawberries"
+      },
+      {
+        step: 2,
+        instruction: "Wash strawberries"
+      },
+      {
+        step: 3,
+        instruction: "Marinate strawberries"
+      },
+      {
+        step: 4,
+        instruction: "Mix strawberries with chocoate"
+      },
+      {
+        step: 5,
+        instruction: "Eat strawberries"
+      },
+    ],
     ingredients: [{
       ingredientName: "strawberry",
       amount: 3
@@ -67,7 +89,28 @@ const sampleRecipes = [
     id: uuidv4(),
     name: "Roasted chocolate",
     cookTime: "0:45",
-    instructions: "1. Roast chocolate 2. Eat strawberry",
+    instructions: [
+      {
+        step: 1,
+        instruction: "Pick strawberries"
+      },
+      {
+        step: 2,
+        instruction: "Wash strawberries"
+      },
+      {
+        step: 3,
+        instruction: "Marinate strawberries"
+      },
+      {
+        step: 4,
+        instruction: "Mix strawberries with chocoate"
+      },
+      {
+        step: 5,
+        instruction: "Eat strawberries"
+      },
+    ],
     ingredients: 
     [
       {
